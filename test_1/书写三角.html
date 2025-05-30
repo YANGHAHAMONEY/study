@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书写三角</title>
+    <style>
+        /* 全局去除默认的 margin 和 padding */
+        * {
+            margin: 0;
+            padding: 0; 
+        }
+        /* 设置 div 的样式和边框 */
+        div {
+            margin: 300px auto; /* 垂直居中并设置顶部间距 */
+            position: relative;  /* 为伪元素定位做准备 */
+            width: 249px;
+            height: 35px;
+            border: 1px solid black;
+        }
+        /* 使用伪元素 ::after 创建一个三角形箭头 */
+        div::after {
+            content: "";
+            position: absolute;
+            top: 12px;           /* 距离顶部 12px */
+            right: 15px;         /* 距离右侧 15px */
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid black;  /* 右边框 */
+            border-bottom: 1px solid black; /* 下边框 */
+            transform: rotate(45deg);       /* 旋转形成箭头 */
+            transition: all 0.3s ease-in-out; /* 平滑过渡动画 */
+        }
+        /* 鼠标悬停时旋转箭头方向 */
+        div:hover::after {
+            transform: rotate(225deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    
+</body>
+</html>

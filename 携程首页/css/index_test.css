@@ -1,0 +1,77 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  /* 永远不会出现水平滚动条 */
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/* 搜索模块 */
+.search-index {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  height: 44px;
+  /* background-color: pink; */
+}
+.search {
+  flex: 1;
+  position: relative;
+  height: 26px;
+  border: 1px solid #ccc;
+  margin: 9px 10px;
+  border-radius: 13px;
+  font-size: 14px;
+  color: #333;
+  padding-left: 32px;
+  background: #fff;
+  transition: border-color 0.2s;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+}
+.search::before {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+  pointer-events: none;
+}
+.user {
+  width: 44px;
+  height: 44px;
+  font-size: 10px;
+  text-align: center;
+  color: blue;
+}
+.user::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 4px auto 0;
+}

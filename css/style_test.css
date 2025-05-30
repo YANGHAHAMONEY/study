@@ -1,0 +1,60 @@
+ * {
+    margin: 0;
+    padding: 0;
+}
+/* 确认版心，若有板块需要可以直接调用 */
+ .w {
+    width:1200px;
+    margin:auto;
+
+ }
+
+ /* 去除list列表之前的默认样式 */
+ li {
+    list-style: none;
+    text-decoration: none;
+
+ }
+
+/* 头部 */
+.header {
+    height: 42px;
+    background-color:pink;
+    /* 注意此处的样式会重叠 .w margin */
+    margin:30px auto;
+    
+}
+/* 头部左侧的logo部分 */
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background-color: purple;
+
+}
+
+/* 导航栏 */
+.nav {
+    /* 一浮全浮，否则无效 */
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+    
+}
+/* 导航栏的链接 */
+.nav ul li a {
+    /* 行内元素没有高度和宽度，所以需要设置为块级元素 */
+    display: block;
+    padding: 0 10px;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+}
+/* 导航栏的wisdom链接添加hover效果 */
+.nav ul li a:hover {
+    background-color: rgba(200, 0, 255, 0.5);
+}

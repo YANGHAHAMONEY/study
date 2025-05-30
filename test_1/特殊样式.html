@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊样式</title>
+    <style>
+        /* 移除移动端点击链接时的高亮效果 */
+        a{
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* 移除按钮的默认样式 */
+        button{
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        /* 禁止长按图片和链接时弹出菜单（如保存图片、复制链接等） */
+        img,a {
+            -webkit-touch-callout: none;
+        }
+    </style>
+</head>
+<body>
+<h1>特殊样式</h1>
+<p>这是一个测试页面，包含一些特殊样式的元素。</p>
+<a href="#">test</a><br>
+<button>test</button>
+
+</body>
+</html>

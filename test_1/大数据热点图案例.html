@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据热点图案例</title>
+    <style>
+        /* 全局去除默认内外边距 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 外层圆形容器样式 */
+        .test {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 50px auto;
+            border-radius: 50%;
+            border: 1px solid #000;
+        }
+        /* 中心黑色圆点 */
+        .dotted {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        /* 扩散动画圆环的基础样式 */
+        .test div[class^="pulse"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px blue;
+            animation: pulse 2s linear infinite;
+        }
+        /* 第二个扩散圆环延迟动画 */
+        .test div.pulse2 {
+            animation-delay: 0.4s;
+        }
+        /* 第三个扩散圆环延迟动画 */
+        .test div.pulse3 {
+            animation-delay: 0.8s;
+        }
+        /* 扩散动画关键帧 */
+        @keyframes pulse {
+           0% {}
+           70% {
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+           }
+           100% {
+            width: 80px;
+            height: 80px;
+            opacity: 1;
+           }
+        }
+    </style>
+</head>
+<body>
+    <!-- 热点图容器 -->
+    <div class="test">
+        <!-- 中心点 -->
+        <div class="dotted"></div>
+        <!-- 扩散动画圆环1 -->
+        <div class="pulse1"></div>
+        <!-- 扩散动画圆环2 -->
+        <div class="pulse2"></div>
+        <!-- 扩散动画圆环3 -->
+        <div class="pulse3"></div>
+    </div>
+</body>
+</html>

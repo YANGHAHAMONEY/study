@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>速度曲线步长</title>
+    <style>
+        /* 定义名为 speed 的关键帧动画，控制宽度从0到200px */
+        @keyframes speed {
+            0% {
+                width: 0px;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+        div {
+            overflow: hidden; /* 隐藏超出容器的内容 */
+            width: 200px;     /* 容器宽度 */
+            height: 30px;     /* 容器高度 */
+            font-size: 20px;  /* 字体大小 */
+            border: 1px solid #000; /* 边框样式 */
+            /* 应用 speed 动画，2秒完成，分10步，循环播放 */
+            animation: speed 2s steps(10) infinite;
+            background-color: rgb(223, 185, 189); /* 背景色 */
+            transition: all 0.5s ease-in-out;     /* 所有属性过渡效果 */
+            white-space: nowrap; /* 不换行 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        世纪佳缘我在这里等你！
+    </div>
+</body>
+</html>

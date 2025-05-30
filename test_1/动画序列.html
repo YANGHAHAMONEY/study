@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画序列</title>
+    <style>
+        /* 全局去除默认边距和内边距 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 定义动画关键帧 */
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(100px);
+            }
+            50% {
+                transform: translateX(100px) translateY(100px);
+            }
+            75% {
+                transform: translateX(0) translateY(100px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+        }
+        /* 设置div样式和应用动画 */
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: pink;
+            animation: move 4s linear infinite; /* 应用move动画，4秒一轮，线性无限循环 */
+            animation-delay: 1s; /* 动画延迟1秒开始 */
+            animation-direction: alternate; /* 动画方向交替 */
+            /* 设置动画填充模式，保持动画结束时的状态 */
+            /* animation-fill-mode: forwards; */
+            text-align: center;
+            line-height: 150px;
+            font-weight: 700;
+             /* 保持动画结束时的状态 */
+            /* aniamation-fill-mode: forwards; */
+        }
+        /* 鼠标悬停时暂停动画并改变背景色 */
+        div:hover {
+            animation-play-state: paused;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 动画盒子 -->
+    <div id="box">wisodm</div>
+
+</body>
+</html>

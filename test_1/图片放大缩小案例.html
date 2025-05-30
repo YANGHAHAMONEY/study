@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片放大缩小案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            overflow: hidden;
+            margin: 200px auto;
+            width: 300px;
+            border: 1px solid pink;
+        }
+        div img {
+            width: 100%;
+            height: auto;
+            display: block; 
+            /*
+                这行CSS的作用是将元素的display属性设置为block（块级元素）。
+                默认情况下，像<img>这样的图片元素是inline（行内元素），
+                行内元素下方通常会有一小块空白，这是因为它们与文本基线对齐，预留了“下行空间”。
+                将display设置为block后，元素会独占一行，不再与文本基线对齐，从而消除了下方的空白间隙。
+                这在图片居中、放大缩小时尤其有用，可以避免布局出现意外的空白。
+            */
+        }
+        
+        img:hover {
+            transform: scale(0.8);
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="http://www.wisdomhqq.com/img/home-bg12.png" alt="图片放大缩小案例">
+    </div>
+    
+</body>
+</html>

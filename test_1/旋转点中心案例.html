@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转点中心案例</title>
+    <style>
+        /* 全局去除内外边距 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* 设置div的样式 */
+        div {
+            overflow: hidden; /* 隐藏超出部分 */
+            width: 300px;
+            height: 300px;
+            margin: 150px auto; /* 居中显示 */
+            border: 1px solid black;
+        }
+        /* 设置div的伪元素before */
+        div::before {
+            content: "wisdom"; /* 显示的文本内容 */
+            display: block; /* 让伪元素变成块级元素，占满父元素 */
+            background-color: pink; /* 背景色 */
+            width: 100%;
+            height: 100%;
+            /* 设置旋转点为左下角 */
+            transform-origin: left bottom;
+            /* 初始旋转90度 */
+            transform: rotate(90deg);
+            /* 添加过渡动画 */
+            transition: all 0.5s;
+            /* 文字居中显示 */
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            color: white;
+        }
+        /* 鼠标悬停时旋转回0度 */
+        div:hover::before {
+            transform: rotate(0deg);
+        }   
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>

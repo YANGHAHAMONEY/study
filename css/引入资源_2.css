@@ -1,0 +1,22 @@
+div:nth-child(1) {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  background-color: blue;
+  text-align: center;
+  line-height: 100px;
+  margin: 1px 1px;
+  border-radius: 15px;
+}
+
+div:nth-child(2) {
+  width: 100px;
+  height: 300px;
+  border: 1px solid pink;
+  background-color: pink;
+  text-align: center;
+  line-height: 100px;
+  margin: 1px 1px;
+  border-radius: 15px;
+}
