@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // continue 语句
+        for (let i = 0; i < 10; i++) {
+            if (i % 2 === 0) {
+                continue; // 如果 i 是偶数，则跳过当前循环
+            }
+            console.log(i); // 只会打印奇数
+        }
+
+        // break 语句
+        for (let j = 0; j < 10; j++) {
+            if (j === 5) {
+                break; // 当 j 等于 5 时，退出循环
+            }
+            console.log(j); // 打印 0 到 4
+        }
+    </script>
+</body>
+
+</html>
