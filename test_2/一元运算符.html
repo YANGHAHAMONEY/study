@@ -15,13 +15,19 @@
 
         //前置自增
         // ++num
-        // console.log(num)
+        // console.log(num) 
 
         let i = 1
+        // 第一步：i++ 先取值再自增，值为1，i变为2
+        // 第二步：++i 先自增再取值，i变为3，值为3
+        // 第三步：i 直接取当前值，值为3
+        console.log(i++ + ++i + i)
+        // 计算过程：1（i++）+ 3（++i）+ 3（i） = 7
+
         // 后置自增：先输出i的值，再自增
-        console.log(i++)
+        // console.log(i++)
         // 前置自增：先自增i的值，再输出
-        console.log(++i)
+        // console.log(++i)
     </script>
 
 </body>
