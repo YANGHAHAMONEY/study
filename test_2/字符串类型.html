@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 定义变量
+    let num = 18;
+    let str = "pink";
+    let str1 = 'wisdom';
+    let str2 = `hqq`;
+
+    // 输出变量str2
+    document.write(str2 + "<br>");
+
+    // 字符串拼接（普通加号拼接）
+    document.write('我叫' + str2 + '今年' + num + "<br>");
+
+    // 单引号和双引号同时出现的字符串
+    let str3 = "I am a 'student' and I love \"coding\"";
+    document.write(str3 + "<br>");
+
+    // 字符串拼接（普通加号拼接）
+    let str4 = "I am a " + str + " and I love " + str1;
+    document.write(str4 + "<br>");
+
+    // 字符串拼接（模板字符串）
+    let str5 = `I am a ${str} and I love ${str1}`;
+    document.write(str5 + "<br>");
+
+    // 模板字符串中使用表达式
+    let str6 = `I am a ${str} and I love ${str1.length} characters`;
+    document.write(str6 + "<br>");
+
+    // 输出中文字符串拼接
+    document.write('我今年' + num + "了");
+  </script>
+
+</body>
+
+</html>
