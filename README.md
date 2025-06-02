@@ -21,4 +21,4 @@
 ## 🔗 相关资源
 - [课程官网](https://www.itheima.com/)
 - [MDN Web文档](https://developer.mozilla.org/)
-- [个人网站](www.wisdomhqq.com)
+- [个人网站](http://www.wisdomhqq.com)
