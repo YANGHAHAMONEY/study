@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['刘德华', 'wisdom', 'hqq', 'hm'];
+
+        document.write('使用for循环遍历数组<br>,arr的长度为：' + arr.length + '<br><br>');
+
+        for (let i = 0; i < arr.length; i++) {
+            if (i === 2) {
+                document.write('遇到hqq，使用continue跳过该元素<br><br>');
+                continue; // 跳过当前循环的剩余部分，继续下一次循环
+            }
+            if (i === 3) {
+                document.write('遇到hm，使用break跳出循环<br><br>');
+                break; // 退出循环
+            }
+            document.write(arr[i] + '<br><br>');
+        }
+
+
+
+        //无限循环
+        // for (; ;) {
+        //     console.log('这是一个无限循环');
+        //     // 注意：在实际应用中，应当有某种条件来打破这个循环，否则会导致浏览器卡死
+        // }
+    </script>
+</body>
+
+</html>
