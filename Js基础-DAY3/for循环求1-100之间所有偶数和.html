@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let total = 0
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                total += i
+                document.write(`${i}是偶数，此时偶数和为${total}<br><br>`)
+            }
+        }
+        document.write(`1-100之间的偶数和为${total}`)
+    </script>
+</body>
+
+</html>
