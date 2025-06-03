@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let money = 100
+        while (true) {
+            let num = +prompt(`
+            请选择您要进行的操作：
+            1、存钱
+            2、取钱
+            3、查看余额
+            4、退出
+             `)
+            if (num === 4) {
+                break
+            }
+            switch (num) {
+                case 1:
+                    let num1 = +prompt('请输入存入金额')
+                    money += num1
+                    alert(`存入成功，当前余额为：${money}`)
+                    break
+                // case 2:
+                //     let num2 = +prompt('请输入取出金额')
+                //     if (isNaN(num2) || num2 <= 0) {
+                //         alert('请输入有效的取出金额')
+                //     } else if (num2 > money) {
+                //         alert('余额不足，请重新输入取出金额')
+                //     } else {
+                //         money -= num2
+                //         alert(`取出成功，当前余额为：${money}`)
+                //     }
+                //     break
+
+
+                case 2:
+                    let num2 = +prompt('请输入取出金额')
+                    if (num2 > money) {
+                        alert('余额不足，请重新输入取出金额')
+                    } else {
+                        money -= num2
+                        alert(`取出成功，当前余额为：${money}`)
+                    }
+                    break
+
+
+
+                case 3:
+                    alert(`您的余额为：${money}`)
+                    break
+                default:
+                    alert('请输入正确操作')
+            }
+        }
+    </script>
+</body>
+
+</html>
